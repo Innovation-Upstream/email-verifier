@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"runtime"
+	"strings"
 	"time"
 )
 
@@ -39,8 +40,8 @@ type Result struct {
 // NewVerifier creates a new email verifier
 func NewVerifier() *Verifier {
 	loadDisposableDomains()
-	loadFreeDomains()
-	loadRoleAccounts()
+	//loadFreeDomains()
+	//loadRoleAccounts()
 
 	return &Verifier{
 		fromEmail: defaultFromEmail,
@@ -63,8 +64,10 @@ func (v *Verifier) Verify(email string) (*Result, error) {
 		return &ret, nil
 	}
 
-	ret.Free = v.IsFreeDomain(syntax.Domain)
-	ret.RoleAccount = v.IsRoleAccount(syntax.Username)
+	//ret.Free = v.IsFreeDomain(syntax.Domain)
+	//ret.RoleAccount = v.IsRoleAccount(syntax.Username)
+	ret.Free = false
+	ret.RoleAccount = false
 	ret.Disposable = v.IsDisposable(syntax.Domain)
 
 	// If the domain name is disposable, mx and smtp are not checked.
@@ -183,22 +186,13 @@ func loadDisposableDomains() {
 		return
 	}
 
-	disposableDomainFile, err := os.Open(basePath + disposableDomainDataPath)
-	if err != nil {
-		panic(fmt.Sprintf("open disposable domains' data file fail: %v ", err))
-	}
-
-	scanner := bufio.NewScanner(disposableDomainFile)
+	scanner := bufio.NewScanner(strings.NewReader(disposableEmails))
 	scanner.Split(bufio.ScanLines)
 
 	for scanner.Scan() {
 		disposableDomains.Store(scanner.Text(), struct{}{})
 	}
 
-	err = disposableDomainFile.Close()
-	if err != nil {
-		panic(fmt.Sprintf("close disposable domains' data file fail: %v ", err))
-	}
 	disposableDomainsLoaded = true
 }
 
