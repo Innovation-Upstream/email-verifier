@@ -49,16 +49,18 @@ func updateDisposableDomains(source string) error {
 	}
 
 	// clear up invalid disposable domains
-	disposableDomains.Range(func(key, value interface{}) bool {
-		if _, exists := newDomains[key.(string)]; !exists {
-			disposableDomains.Delete(key)
-		}
-		return true
-	})
+	/*
+		disposableDomains.Range(func(key, value interface{}) bool {
+			if _, exists := newDomains[key.(string)]; !exists {
+				disposableDomains.Delete(key)
+			}
+			return true
+		})
 
-	// update new domain data
-	for _, d := range domains {
-		disposableDomains.Store(d, struct{}{})
-	}
+		// update new domain data
+		for _, d := range domains {
+			disposableDomains.Store(d, struct{}{})
+		}
+	*/
 	return nil
 }

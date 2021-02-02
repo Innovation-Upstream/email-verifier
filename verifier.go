@@ -184,7 +184,7 @@ func loadDisposableDomains() {
 		return
 	}
 
-	disposableDomains := strings.Split(disposableEmails, ",")
+	disposableDomains = strings.Split(disposableEmails, ",")
 
 	disposableDomainsLoaded = true
 }
