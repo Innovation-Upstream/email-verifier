@@ -13,7 +13,7 @@ All code submissions will be reviewed and tested by the team, and those that mee
 
 You can find information in editor support for Go tools here: [https://github.com/golang/go/wiki/IDEsAndTextEditorPlugins](https://github.com/golang/go/wiki/IDEsAndTextEditorPlugins)
 
-If you encounter any bugs with the library please file an issue in the [Issues](https://github.com/AfterShip/email-verifier/issues) section of the project.
+If you encounter any bugs with the library please file an issue in the [Issues](https://github.com/innovation-upstream/email-verifier/issues) section of the project.
 
 ## Things to keep in mind when contributing
 

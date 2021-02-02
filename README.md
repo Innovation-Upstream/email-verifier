@@ -2,11 +2,11 @@
 
 ✉️ A Go library for email verification without sending any emails.
 
-[![Build Status](https://github.com/AfterShip/email-verifier/workflows/CI%20Actions/badge.svg)](https://github.com/AfterShip/email-verifier/actions)
-[![Godoc](http://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/AfterShip/email-verifier)
-[![Coverage Status](https://coveralls.io/repos/github/AfterShip/email-verifier/badge.svg?t=VTgVfL)](https://coveralls.io/github/AfterShip/email-verifier)
-[![Go Report Card](https://goreportcard.com/badge/github.com/AfterShip/email-verifier)](https://goreportcard.com/report/github.com/AfterShip/email-verifier)
-[![license](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://github.com/AfterShip/email-verifier/blob/main/LICENSE)
+[![Build Status](https://github.com/innovation-upstream/email-verifier/workflows/CI%20Actions/badge.svg)](https://github.com/innovation-upstream/email-verifier/actions)
+[![Godoc](http://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/innovation-upstream/email-verifier)
+[![Coverage Status](https://coveralls.io/repos/github/innovation-upstream/email-verifier/badge.svg?t=VTgVfL)](https://coveralls.io/github/innovation-upstream/email-verifier)
+[![Go Report Card](https://goreportcard.com/badge/github.com/innovation-upstream/email-verifier)](https://goreportcard.com/report/github.com/innovation-upstream/email-verifier)
+[![license](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://github.com/innovation-upstream/email-verifier/blob/main/LICENSE)
 
 ## Features
 
@@ -21,7 +21,7 @@
 Use `go get` to install this package.
 
 ```shell script
-go get -u github.com/AfterShip/email-verifier
+go get -u github.com/innovation-upstream/email-verifier
 ```
 
 ## Usage
@@ -36,7 +36,7 @@ package main
 import (
     "fmt"
 
-    "github.com/AfterShip/email-verifier"
+    "github.com/innovation-upstream/email-verifier"
 )
 
 var (
@@ -103,11 +103,11 @@ func main() {
 
 > Note: It is possible to automatically update the disposable domains daily by initializing verifier with `EnableAutoUpdateDisposable()`
 
-For more detailed documentation, please check on godoc.org 👉 [email-verifier](https://godoc.org/github.com/AfterShip/email-verifier)
+For more detailed documentation, please check on godoc.org 👉 [email-verifier](https://godoc.org/github.com/innovation-upstream/email-verifier)
 
 ## Similar Libraries Comparison
 
-|                                     | [email-verifier](https://github.com/AfterShip/email-verifier) | [trumail](https://github.com/trumail/trumail) | [check-if-email-exists](https://reacher.email/) | [freemail](https://github.com/willwhite/freemail) |
+|                                     | [email-verifier](https://github.com/innovation-upstream/email-verifier) | [trumail](https://github.com/trumail/trumail) | [check-if-email-exists](https://reacher.email/) | [freemail](https://github.com/willwhite/freemail) |
 | ----------------------------------- | :----------------------------------------------------------: | :-------------------------------------------: | :---------------------------------------------: | :-----------------------------------------------: |
 | **Features**                        |                              〰️                              |                      〰️                       |                       〰️                        |                        〰️                         |
 | Disposable email address validation |                              ✅                               |       ✅, but not available in free lib        |                        ✅                        |                         ✅                         |
@@ -160,8 +160,8 @@ This means that the server does not allow real-time verification of an email rig
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/AfterShip/email-verifier/blob/main/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/innovation-upstream/email-verifier/blob/main/CONTRIBUTING.md).
 
 ## License
 
-This package is licensed under MIT license. See [LICENSE](https://github.com/AfterShip/email-verifier/blob/main/LICENSE) for details.
+This package is licensed under MIT license. See [LICENSE](https://github.com/innovation-upstream/email-verifier/blob/main/LICENSE) for details.
