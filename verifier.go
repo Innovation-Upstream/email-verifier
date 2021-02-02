@@ -39,7 +39,6 @@ func NewVerifier() *Verifier {
 	loadDisposableDomains()
 	//loadFreeDomains()
 	//loadRoleAccounts()
-
 	return &Verifier{
 		fromEmail: defaultFromEmail,
 		helloName: defaultHelloName,
@@ -178,6 +177,7 @@ func loadFreeDomains() {
 	}
 }
 */
+
 // loadDisposableDomains loads disposable_domain data
 func loadDisposableDomains() {
 	if disposableDomainsLoaded {
@@ -189,21 +189,6 @@ func loadDisposableDomains() {
 	disposableDomainsLoaded = true
 }
 
-/*
-func loadDisposableDomains() {
-	if disposableDomainsLoaded {
-		return
-	}
-
-	scanner := bufio.NewScanner(strings.NewReader(disposableEmails))
-	scanner.Split(bufio.ScanLines)
-
-	for scanner.Scan() {
-		disposableDomains.Store(scanner.Text(), struct{}{})
-	}
-
-	disposableDomainsLoaded = true
-}*/
 // loadRoleAccounts loads role_account data
 /*
 func loadRoleAccounts() {
