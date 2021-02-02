@@ -1,9 +1,6 @@
 package emailverifier
 
 import (
-	"bufio"
-	"fmt"
-	"os"
 	"path/filepath"
 	"runtime"
 	"strings"
@@ -156,6 +153,7 @@ func (v *Verifier) HelloName(domain string) *Verifier {
 }
 
 // loadFreeDomains loads free_domain data
+/*
 func loadFreeDomains() {
 	if len(freeDomains) > 0 {
 		return
@@ -179,8 +177,19 @@ func loadFreeDomains() {
 		panic(fmt.Sprintf("close free domains' data file fail: %v ", err))
 	}
 }
-
+*/
 // loadDisposableDomains loads disposable_domain data
+func loadDisposableDomains() {
+	if disposableDomainsLoaded {
+		return
+	}
+
+	disposableDomains := strings.Split(disposableEmails, ",")
+
+	disposableDomainsLoaded = true
+}
+
+/*
 func loadDisposableDomains() {
 	if disposableDomainsLoaded {
 		return
@@ -194,9 +203,9 @@ func loadDisposableDomains() {
 	}
 
 	disposableDomainsLoaded = true
-}
-
+}*/
 // loadRoleAccounts loads role_account data
+/*
 func loadRoleAccounts() {
 	if len(roleAccounts) > 0 {
 		return
@@ -220,7 +229,7 @@ func loadRoleAccounts() {
 		panic(fmt.Sprintf("close role accounts' data file fail: %v ", err))
 	}
 }
-
+*/
 func (v *Verifier) calculateReachable(s *SMTP) string {
 	if !v.smtpCheckEnabled {
 		return reachableUnknown
